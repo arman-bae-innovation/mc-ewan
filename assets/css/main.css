@@ -1,0 +1,240 @@
+*{
+  font-family: "Montserrat", sans-serif;
+}
+body{
+  background-color: black;
+  color: white;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+.bannerHeading{
+  font-weight: 500;
+  letter-spacing: .1em;
+}
+.navbarLogoPath, .navbarLogoSvg{
+  transition: .3s;
+}
+.navbarLogo:hover .navbarLogoPath{
+  fill: #00b3ff;
+}
+.navbarLogo:hover .navbarLogoSvg{
+  transform: scale(1.3);
+}
+.services{
+  background-color: white; 
+  color: black; 
+  border-radius: 40px;
+}
+.goal{
+  background-image: url('../img/GoalSection.png');
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: contain;
+}
+.contactBtn{
+  background: linear-gradient(90deg, #ffffff, #999999);
+}
+.contactBtn:hover{
+  background: linear-gradient(90deg, #999999, #ffffff);
+}
+.scheduleBtn{
+  background: linear-gradient(90deg, #000000, #464646);
+}
+.scheduleBtn:hover{
+  background: linear-gradient(90deg, #464646, #000000);
+}
+
+.Mcewan{
+  animation-name: Mcewan;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes Mcewan{
+  0%{
+    text-shadow: 0 0 10px #00b3ff,
+    0 0 20px #00b3ff,
+    0 0 40px #00b3ff,
+    0 0 80px #00b3ff,
+    0 0 120px #00b3ff;
+  }
+  33%{
+    text-shadow: none;
+  }
+  66%{
+    text-shadow: none;
+  }
+}
+.Advisory{
+  animation-name: Advisory;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes Advisory{
+  0%{
+    text-shadow: none;
+  }
+  33%{
+    text-shadow: 0 0 10px #00b3ff,
+    0 0 20px #00b3ff,
+    0 0 40px #00b3ff,
+    0 0 80px #00b3ff,
+    0 0 120px #00b3ff;
+  }
+  66%{
+    text-shadow: none;
+  }
+}
+.Group{
+  animation-name: Group;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes Group{
+  0%{
+    text-shadow: none;
+  }
+  33%{
+    text-shadow: none;
+  }
+  66%{
+    text-shadow: 0 0 10px #00b3ff,
+    0 0 20px #00b3ff,
+    0 0 40px #00b3ff,
+    0 0 80px #00b3ff,
+    0 0 120px #00b3ff;
+  }
+}
+
+
+.stat h3, p{
+  font-family: "Poppins", sans-serif;
+}
+#scrollToTop{
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 100%;
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#scrollToTop i{
+  color: gray;
+}
+.nav-tabs .nav-link {
+  margin-bottom: calc(-1 * var(--bs-nav-tabs-border-width));
+  border: none;
+  font-size: 33px;
+  width: 25%;
+  font-weight: 600;
+  color: black;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  color: var(--bs-nav-tabs-link-active-color);
+  background-color: var(--bs-nav-tabs-link-active-bg);
+  border-color: transparent;
+  border-bottom: 5px solid black;
+}
+.modal-header, .modal-body, .modal-footer{
+  background-color: rgb(34, 34, 34);
+  color: white;
+}
+
+
+.text1Animation{
+  color: white;
+  position: relative;
+  font-weight: 500;
+  transition: 1s ease-in-out;
+}
+.text1Animation::before{
+  content: "GetStarted";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  overflow: hidden;
+  color: #00b3ff;
+  border-right: 1px solid #00b3ff;
+  transition: 1s ease-in-out;
+  animation: textReveal 2s ease-in-out infinite;
+}
+@keyframes textReveal{
+  0%, 100% {  width: 0%; }
+  50% { width: 100%; }
+}
+.text1AnimationIcon{
+  transition: 1s ease-in-out;
+}
+.getStarted:hover .text1AnimationIcon{
+  color: #00b3ff;
+}
+.getStarted:hover .text1Animation::before{
+  animation: none;
+}
+.getStarted:hover .text1Animation{
+  color: #00b3ff;
+}
+
+
+.leftArrow {
+  animation-name: leftArrow;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+@keyframes leftArrow{
+  from{ opacity: 0; }
+  to{ opacity: 1; }
+}
+.rightArrow {
+  animation-name: rightArrow;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+@keyframes rightArrow{
+  from{ opacity: 1; }
+  to{ opacity: 0; }
+}
+
+
+
+.curveUnderline{
+  position: relative;
+  color: #00b3ff;
+}
+.curveUnderline:after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  border-top: solid 3px #00b3ff;
+  left: 0;
+  bottom: -15px;
+  border-radius: 50%;
+  height: 15px;
+}
+
+
+@media screen and (max-width: 600px) {
+  .rotate-90 {
+    transform: rotate(90deg);
+    transform-origin: center;
+    margin: 30px 0px;
+  }
+  .goalLeftPara, .goalRightPara{
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
